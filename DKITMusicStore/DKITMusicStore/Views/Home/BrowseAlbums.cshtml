@@ -1,0 +1,27 @@
+﻿@model DKITMusicStore.Models.Genre
+
+@{
+    ViewBag.Title = "BrowseAlbums : ";
+}
+
+<h2>Browse Albums Genre : @Model.Name</h2>
+
+
+
+<table class="table table-hover">
+    <caption>@Model.Name Albums</caption>
+
+    <thead>
+        <tr><th>Title</th><th>Artist</th><th>Price</th></tr>
+    </thead>
+        <tbody>
+        @foreach (var album in Model.Albums)
+        {
+            <tr>
+                <td> @Html.ActionLink(album.Title, "BrowseAlbumDetails", new { id = album.AlbumId })</td>
+                <td> @album.Artist.Name</td>
+                <td> @Html.DisplayFor(model => album.Price, "Currency")</td>
+            </tr>
+        }
+        </tbody>
+</table>

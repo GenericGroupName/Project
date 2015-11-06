@@ -1,0 +1,14 @@
+﻿@model IEnumerable<DKITMusicStore.Models.Genre>
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Shop by Genre : </h2>
+
+<p>Select from the following genres : </p>
+<ul>
+    @foreach (var Genre in Model)
+    {
+        <li> @Html.ActionLink(Genre.Name, "BrowseAlbums", new { genre = Genre.Name })</li>
+    }

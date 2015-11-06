@@ -1,0 +1,15 @@
+﻿@model DKITMusicStore.Models.Album
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2 class=" bg bg-primary">@Model.Title</h2>
+
+<div class=" = alert alert-success">
+    <p>Album Name :   @Model.Title</p>
+    <p>Album Artist : @Model.Artist.Name</p>
+    <p>Album Price : <span class="glyphicon glyphicon-euro"></span> @Model.Price</p>
+    <p><img src="@Model.AlbumArtUrl"/></p>
+    <p class="btn btn-default">@Html.ActionLink("Add to Cart", "AddToCart", "ShoppingCart", new { id = Model.AlbumId }, "")</p>
+</div>
