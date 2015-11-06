@@ -1,0 +1,13 @@
+//Github help
+
+//to upload files to github
+git add *
+git commit -m "Enter message here"
+git push
+
+//To download current files
+git clone https://github.com/GenericGroupName/Project
+
+//Make sure your in the project directory when using the terminal
+//Make sure you download the most up to date version before continuing work
+//Clone the repo each time then carry on working, then commit and push it before stopping
